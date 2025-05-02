@@ -1,4 +1,4 @@
-# Lips Framework Documentation
+# Lips UI Framework
 
 ## Table of Contents
 
