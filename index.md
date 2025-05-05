@@ -1,6 +1,43 @@
 # Lips UI Framework
 
-## Table of Contents
+Easy, straightforward and direcrly into the browser, no pre-build required.
+
+[![View on GitHub](https://img.shields.io/badge/GitHub-View_on_GitHub-blue?style=flat&logo=GitHub)](https://github.com/fabrice8/lips)
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Lips App</title>
+</head>
+<body>
+  <div id="app"></div>
+  
+  <script type="module">
+    // Import from CDN directly in the module script
+    import Lips from 'https://cdn.jsdelivr.net/npm/@lipsjs/lips'
+
+    const lips = new Lips();
+    
+    // <counter/> component
+    const counter = {
+      state: { count: 0 },
+      handler: {
+        increment() { this.state.count++; }
+      },
+      default: `
+        <div>
+          <h2>Count: {state.count}</h2>
+          <button on-click(increment)>Increment</button>
+        </div>
+      `
+    };
+    
+    lips.root(counter, '#app');
+  </script>
+</body>
+</html>
+```
 
 1. [**Introduction**](#introduction)
    - [What is Lips?](#what-is-lips)
